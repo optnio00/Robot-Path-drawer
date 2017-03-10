@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bp_parent"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="left"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:id="@+id/layout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stopwatch"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step Count"
+            android:id="@+id/textView2"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView6"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:id="@+id/textView3"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avg Speed"
+            android:id="@+id/textView4"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coordinates"
+            android:id="@+id/textView5"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00:00"
+            android:id="@+id/timer"
+            android:layout_above="@+id/textView2"
+            android:layout_toRightOf="@+id/textView6"
+            android:layout_toEndOf="@+id/textView6"
+            android:textSize="18dp"
+            android:layout_marginLeft="60dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000"
+            android:id="@+id/stepcount"
+            android:textSize="18dp"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignLeft="@+id/timer"
+            android:layout_alignStart="@+id/timer"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000.0"
+            android:id="@+id/dis"
+            android:textSize="18dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignLeft="@+id/stepcount"
+            android:layout_alignStart="@+id/stepcount"
+            android:singleLine="true"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:id="@+id/avgspeed"
+            android:textSize="18dp"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignLeft="@+id/dis"
+            android:layout_alignStart="@+id/dis"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hh:mm:ss"
+            android:id="@+id/textView11"
+            android:layout_alignBottom="@+id/timer"
+            android:layout_toRightOf="@+id/timer"
+            android:layout_toEndOf="@+id/timer"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            android:id="@+id/textView13"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/dis"
+            android:layout_toRightOf="@+id/dis"
+            android:layout_toEndOf="@+id/dis"
+            android:layout_marginLeft="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kmph"
+            android:id="@+id/textView14"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/avgspeed"
+            android:layout_toRightOf="@+id/avgspeed"
+            android:layout_toEndOf="@+id/avgspeed"
+            android:layout_marginLeft="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:id="@+id/textView12"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000.0"
+            android:id="@+id/X"
+            android:textSize="18dp"
+            android:layout_alignTop="@+id/textView12"
+            android:layout_alignLeft="@+id/avgspeed"
+            android:layout_alignStart="@+id/avgspeed"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:id="@+id/textView15"
+            android:layout_below="@+id/textView12"
+            android:layout_alignLeft="@+id/textView12"
+            android:layout_alignStart="@+id/textView12"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000.0"
+            android:id="@+id/Y"
+            android:textSize="18dp"
+            android:layout_alignTop="@+id/textView15"
+            android:layout_alignLeft="@+id/X"
+            android:layout_alignStart="@+id/X"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z"
+            android:id="@+id/textView18"
+            android:layout_below="@+id/textView15"
+            android:layout_alignLeft="@+id/textView15"
+            android:layout_alignStart="@+id/textView15"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000.0"
+            android:id="@+id/Z"
+            android:textSize="18dp"
+            android:layout_alignTop="@+id/textView18"
+            android:layout_alignLeft="@+id/Y"
+            android:layout_alignStart="@+id/Y"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            android:id="@+id/textView20"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:layout_alignBottom="@+id/X"
+            android:layout_toRightOf="@+id/X"
+            android:layout_toEndOf="@+id/X"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            android:id="@+id/textView38"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:layout_alignBottom="@+id/Y"
+            android:layout_toRightOf="@+id/Y"
+            android:layout_toEndOf="@+id/Y"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            android:id="@+id/textView39"
+            android:textStyle="italic"
+            android:textSize="13dp"
+            android:layout_alignBottom="@+id/Z"
+            android:layout_toRightOf="@+id/Z"
+            android:layout_toEndOf="@+id/Z"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connection_state"
+        android:background="#dddddd"
+        android:hint="Type File Name"
+        android:textColor="#001fdf"
+        android:textSize="20dp"
+        android:singleLine="true" />
+
+   <!-- <Button
+        android:id="@+id/button_stop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        android:layout_gravity="top"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:id="@+id/start_stop_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:layout_marginLeft="10dp" />-->
+        <Button
+            android:id="@+id/start_stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_selector"
+            android:paddingEnd="50dp"
+            android:paddingStart="50dp"
+            android:text="@string/blood_pressure_start_btn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_very_small" />
+       </LinearLayout>
+    </LinearLayout>

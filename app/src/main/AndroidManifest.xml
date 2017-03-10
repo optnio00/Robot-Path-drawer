@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tricktekno.optnio.oblu">
+
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+
+
+    <!--
+    Declare this required feature if you want to make the app available to BLE-capable
+    devices only.  If you want to make your app available to devices that don't support BLE,
+    you should omit this in the manifest.  Instead, determine BLE capability by using
+    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+    -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/alicebig"
+        android:label="@string/app_name"
+        android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name="com.tricktekno.optnio.oblu.Splashscreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tricktekno.optnio.oblu.SettingsActivity"
+            android:icon="@drawable/ic_action_name"
+            android:label="Settings"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name="com.tricktekno.optnio.oblu.DeviceScanActivity"
+            android:label="@string/app_name"
+            android:icon="@drawable/daelogo"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+        </activity>
+        <activity android:name="com.tricktekno.optnio.oblu.DeviceControlActivity"/>
+
+        <service android:name="com.tricktekno.optnio.oblu.BluetoothLeService" android:enabled="true"/>
+
+        <activity
+            android:name="com.tricktekno.optnio.oblu.MainActivity"
+            android:label="@string/app_name" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.tricktekno.optnio.oblu.Main2Activity" />
+
+        <service
+            android:name="com.tricktekno.optnio.oblu.BluetoothLeService"
+            android:enabled="true" />
+
+        <activity android:name="com.tricktekno.optnio.oblu.AboutActivity"></activity>
+        <activity android:name="com.tricktekno.optnio.oblu.Contact"></activity>
+        <activity android:name="com.tricktekno.optnio.oblu.session_list"></activity>
+    </application>
+
+</manifest>

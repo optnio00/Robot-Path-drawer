@@ -1,0 +1,71 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">oblu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_syncConnectionTypes_default">testDefaultOne, testDefaultTwo, testDefaultThree</string>
+    <string name="TargetSummary">This is a Summary.</string>
+    <string name="TargetTitle">This is the title</string>
+    <string name="testDialogTitle">testDialogTitle</string>
+    <string name="mode_repeat">testTitle</string>
+    <string name="default_value">Low</string>
+
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to <xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+
+    <string name="title_activity_xml">FabOptions: XML</string>
+    <string name="title_activity_java">FabOptions: Java</string>
+    <string name="website">joaquimley.com</string>
+
+    <string name="change_activity">Change Activity</string>
+    <string name="action_snackbar_test_message">FabOptions should react to me</string>
+    <string name="action_snackbar_test">Snackbar test</string>
+
+    <string name="UART_START">START</string>
+    <string name="UART_STOP">STOP</string>
+    <string name="UART">UARTSPP</string>
+    <string name="blood_pressure_start_btn">START</string>
+
+
+    <!-- Menu items -->
+
+
+</resources>

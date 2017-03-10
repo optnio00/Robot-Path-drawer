@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_scan"
+        android:title="Scan"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_share"
+        android:showAsAction="ifRoom"
+        android:title="Share"
+        android:actionProviderClass=
+            "android.widget.ShareActionProvider"
+        tools:ignore="AppCompatResource" />
+    <item android:id="@+id/about"
+        android:title="About"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/contact"
+        android:title="Contact"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/save"
+        android:title="Save Session"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/load"
+        android:title="Load Session"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

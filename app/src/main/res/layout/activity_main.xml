@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) Joaquim Ley 2016. All Rights Reserved.
+  ~ <p/>
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ <p/>
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~ <p/>
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_scale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="beginning"
+        android:paddingTop="16dp">
+
+        <com.tricktekno.optnio.oblu.ManualControlView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:id="@+id/manualView"
+            android:visibility="gone"
+            />
+
+        <com.tricktekno.optnio.oblu.PathDrawView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="70dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="top"
+            android:id="@+id/canvas"
+            android:visibility="visible"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <!--<TextView
+            android:maxLines = "1000"
+            android:scrollbars = "vertical"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_gravity="right"
+            android:text="Walk 10 \n Rotate 90deg \nWalk 10 \n Rotate 90deg \nWalk 10 \n Rotate 90deg \nWalk 10 \n Rotate 90deg"
+            android:id="@+id/text"
+            android:focusableInTouchMode="true" /> -->
+    </LinearLayout>
+    <com.joaquimley.faboptions.FabOptions
+        android:id="@+id/fab_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:button_menu="@menu/menu_faboptions"
+        android:gravity="start" />
+
+    <RelativeLayout
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingRight="1dp"
+            fab:menu_backgroundColor="#ccffffff"
+            fab:menu_fab_label="Choose an action"
+            fab:fab_colorNormal="#DA4336"
+            fab:fab_colorPressed="#E75043"
+            fab:fab_colorRipple="#99FFFFFF"
+            fab:fab_showShadow="true"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="left"
+            fab:menu_openDirection="up"
+            fab:fab_shadowColor="#66000000"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_singleLine="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_photo"
+                android:onClick="onClick"
+                fab:fab_label="Choose Image"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_revert"
+                android:onClick="onClick"
+                fab:fab_label="Reset background"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_setting"
+                android:onClick="onClick"
+                fab:fab_label="Settings"
+                fab:fab_size="mini" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save"
+                android:onClick="onClick"
+                fab:fab_label="Save Bitmap"
+                fab:fab_size="mini" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_about"
+                android:onClick="onClick"
+                fab:fab_label="About"
+                fab:fab_size="mini" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_contact"
+                android:onClick="onClick"
+                fab:fab_label="Contact"
+                fab:fab_size="mini" />
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
